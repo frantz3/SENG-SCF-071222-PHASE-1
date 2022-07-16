@@ -1,4 +1,8 @@
 /* 
+
+  Driver: Person who actually writes the code
+  Navigator: Person is helping and what they should be coding and what they think they should do.
+
   Create a function that works just like a calculator
   Your function should accept three arguments, two numbers, and a string.
   Operations that your function should be able to complete
@@ -21,10 +25,10 @@
   myCalculator('/', 4, 2)   => 2
   myCalculator('^', 2, 3)   => 8
 
-
   BONUS: Allow for number inputs to be either String or Number
 */
 // Write your code here
+<<<<<<< HEAD
 // function myCalculator(operator, num1, num2) {
 //   let operator = '+';
 //   return `${num1} ${operator} ${num2}`;
@@ -58,3 +62,19 @@ function myCalculator(operator, num1, num2) {
   }
 }
 console.log(myCalculator('+', 1, 2));
+=======
+
+// doSomething() => Log do something
+
+function doSomething() {
+  console.log("do something!")
+}
+// undefined
+
+doSomething
+// the whole function (reference)
+
+
+doSomething();
+// calling, invoking
+>>>>>>> fa467c20ac159afa71a9137725202aa8a459e77b
