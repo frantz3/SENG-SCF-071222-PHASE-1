@@ -41,13 +41,11 @@
 // conditionals
 let bank = 20000;
 
-<<<<<<< HEAD
 function addToBank(num){
     return bank + num
 }
 
 addToBank(1000)
-=======
 // if (classRoom === "open"){
 //    console.log("Go IN!")
 // } else if(haveKey){
@@ -70,7 +68,6 @@ addToBank(1000)
 // classRoom === "open" ? console.log("GoIn") : console.log("Go Home")
 
 
->>>>>>> 54348279af103f502348483c613c87f4161e4dca
 // =============================================================================
 // FUNCTIONS
 
@@ -236,8 +233,6 @@ addToBank(1000)
 
 // Callbacks
 // =============================================================================
-<<<<<<< HEAD
-=======
 // WHAT IS A CALLBACK? <=====
 
 // const doSomething = (num, num1) => `RETURNS ${num}`
@@ -252,5 +247,4 @@ addToBank(1000)
 
 
 
->>>>>>> 54348279af103f502348483c613c87f4161e4dca
 
