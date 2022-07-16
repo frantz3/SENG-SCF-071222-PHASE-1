@@ -41,7 +41,7 @@ console.warn('Warning you should try this in your console')
 console.error('I have detected you have not tried this in your console')
 
 // Copy and paste this into your console on google chrome
-console.table(['this','is','a','collection','of','words']
+console.table(['this','is','a','collection','of','words'])
 ```
 
 
