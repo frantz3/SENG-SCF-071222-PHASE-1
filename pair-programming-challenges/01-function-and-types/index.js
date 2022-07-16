@@ -25,3 +25,36 @@
   BONUS: Allow for number inputs to be either String or Number
 */
 // Write your code here
+// function myCalculator(operator, num1, num2) {
+//   let operator = '+';
+//   return `${num1} ${operator} ${num2}`;
+// }
+// myCalculator(operator, 1, 2);
+
+function myCalculator(operator, num1, num2) {
+  switch (operator) {
+    case '+' :
+      return num1 + num2;
+      break;
+
+      case '-' :
+      return num1 - num2;
+      break;
+
+      case '*' :
+      return num1 * num2;
+      break;
+
+      case '/' :
+      return num1 / num2;
+      break;
+
+      case '^' :
+      return num1 ^ num2;
+      break;
+      
+      default: 
+        return console.log('Not an operator');
+  }
+}
+console.log(myCalculator('+', 1, 2));
