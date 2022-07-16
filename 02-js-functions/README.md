@@ -181,13 +181,20 @@ const arrowFoo = (bar) => `I am an arrow, ${bar}!`;
 const arrowFoo = (bar) => `I am an arrow, ${bar}!`;
 
 arrowFoo("function");
+
+              // anonymous functions
+const arrowFoo = function(){
+  console.log("FOO")
+}
+              // anonymous functions
+const arrowFoo = () => {}
 ```
 
 ### Callbacks
 
 ---
 
-Functions in javascript are first class. A function is considered first class if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function. [Read more\*](https://www.geeksforgeeks.org/what-is-the-first-class-function-in-javascript/#:~:text=First%2DClass%20Function%3A%20A%20programming,a%20first%2Dclass%2Dcitizens.)
+Functions in javascript are first class. A function is considered first class if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function. [Read more*](https://www.geeksforgeeks.org/what-is-the-first-class-function-in-javascript/#:~:text=First%2DClass%20Function%3A%20A%20programming,a%20first%2Dclass%2Dcitizens.)
 
 ```js
 let checkings = 1000;

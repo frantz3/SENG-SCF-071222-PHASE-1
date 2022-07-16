@@ -1,4 +1,4 @@
-# SENG-SCF-032122-PHASE-1
+# SENG-SCF-071222-PHASE-1
 
 ## Forking and cloning
 
@@ -55,3 +55,31 @@ To clone this repository into your local computer from this remote follow the st
 1. Navigate to `localhost:<PORT>` replace `<PORT>` with the port that was opened on your machine
 
    ![browser example](/assets/images/browser.png)
+
+
+## HOTKEYS:
+**WINDOWS**
+1. ctrl + c - copy
+1. ctrl + v - paste
+1. ctrl + s - save
+1. ctrl + / - comment out
+1. ctrl + d - highlight multiple of the same words
+1. alt + down/up - move a line down or up respectively
+1. alt + shift + down/up - copy a line down or up respectively
+
+**MACOS**
+1. cmd + c - copy
+1. cmd + v - paste
+1. cmd + s - save
+1. cmd + / - comment out
+1. cmd + d - highlight multiple of the same words
+1. option + down/up - move a line down or up respectively
+1. option + shift + down/up - copy a line down or up respectively
+
+**MAC**
+
+## EXTENSIONS:
+
+1. [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+1. [code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)

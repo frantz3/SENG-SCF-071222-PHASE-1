@@ -135,7 +135,7 @@ listOfTruthyValues = [
 ]
 
 // Falsy Values -> All of these return false
-listOfTruthyValues = [
+listOfFalsyValues = [
     !!0,
     !!"",
     !!null,
