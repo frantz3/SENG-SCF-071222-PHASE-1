@@ -2,19 +2,19 @@
 // Function review
 // =============================================================================
 
-// What is a function? 
+// What is a function?
 
 // a block a code and runs what ever function
-// a proccess to be executed.
+// a process to be executed.
 // something that gets passed 0, 1, or more pieces of info, and does something and/or returns something back
-// num1 - parame
+// num1 - params
 // function doSomething(parameter){
 //     console.log(parameter)
 //     // undefined until we return
 //     return parameter
 // }
 
-// Hoisting? functions get hoisted var it also get hoisted 
+// Hoisting? functions get hoisted var it also get hoisted
 // when you call the function before declare
 
 // isHoisted()
@@ -22,24 +22,20 @@
 //     console.log("hoist")
 // }
 
-
 // console.log(isHoisted);
 // isHoisted = 6;
 
 // declaration of the variable
 // var isHoisted = 5;
 
-
 // console.log(isHoisted())
 // var isHoisted = function(){
 //     console.log("something")
 // }
 
-
 // Scope
 
 // global scope
-
 
 // outside of any function or block of code
 // const global = "global"
@@ -53,7 +49,6 @@
 //     const ifVar = "block"
 // }
 
-
 // false && oasindoasin;
 
 // function doSomething(){
@@ -61,8 +56,6 @@
 //     console.log("eri");
 //     return 'eri'
 // }
-
-
 
 // function doSomething(){
 
@@ -91,8 +84,6 @@
 // // Checking was not changed because we never assigned checking to anything
 // // NEVER DID: checking = checking - Number(amount);
 
-
-
 // //
 // const makeTransaction = (calcFunc, amount) => {
 //     checking = calcFunc(amount); // calcDeposit or calcWithdrawal
@@ -102,7 +93,6 @@
 // // DEPOSIT 1000;
 // makeTransaction(calcDeposit, 1000);
 // makeTransaction(calcWithdrawal, 3000);
-
 
 // const callback = () => {
 //     console.log("I WILL BE USED IN THE ARGUMENT OF ANOTHER")
@@ -124,7 +114,7 @@
 //     bank = action(amount);
 //     // bank = 500
 //     const ans = `Your remaining balance is ${bank}`
-//     console.log(ans);   
+//     console.log(ans);
 //     return ans;
 // }
 
@@ -141,7 +131,6 @@
 // =============================================================================
 // Array Methods
 // =============================================================================
-
 
 // ()
 // {}
@@ -172,11 +161,10 @@
 //     "Michael Loseto",
 //   ]
 
-
 // ARRAY METHODS
 
 // ADDING THE THE END OF THE ARRAY
-arr.push("Eri Guzman")
+arr.push("Eri Guzman");
 
 // ADDING TO THE BEGINNING THE ARRAY
 
@@ -190,8 +178,7 @@ arr.push("Eri Guzman")
 // 9
 
 // SETTING AT AN INDEX
-arr[arr.length -1] = "Eriberto Guzman"
-
+arr[arr.length - 1] = "Eriberto Guzman";
 
 // const arr = [
 //     "Alma Perez Bautista",
@@ -211,7 +198,6 @@ arr[arr.length -1] = "Eriberto Guzman"
 // arr.splice(1, 2)
 //  arr.splice(1, 0, ["Carla Sachetti", "Elna Jean-Pierre"])
 
-
 // NON-DESTRUCTIVE ( Out of Place)  CHANGE THE ARRAY
 
 // Makes a new array copy
@@ -226,8 +212,6 @@ arr[arr.length -1] = "Eriberto Guzman"
 
 // WHILE LOOP
 
-
-
 // while(false){
 //     bank = bank - 1;
 //     console.log("CHECK BALANCE: ", bank)
@@ -237,7 +221,7 @@ arr[arr.length -1] = "Eriberto Guzman"
 // i = i + 1
 
 // FOR LOOPS
- // length = 5
+// length = 5
 
 // for(let i=0; i<arr.length; i++){
 //     console.log(arr[i])
@@ -258,40 +242,36 @@ arr[arr.length -1] = "Eriberto Guzman"
 // High Order Functions and JavaScript Array Iteration
 // =============================================================================
 
-// What is a higher order function? 
+// What is a higher order function?
 // const numsArr = [1,2,3,4,5]
 
-
 let bank = 1000;
-
 
 const calcDeposit = (amount) => bank + amount;
 const calcWithdrawal = (amount) => bank - amount;
 
 const atm = (action, amount) => {
-    // debugger;
-    bank = action(amount);
-    // bank = 500
-    const ans = `Your remaining balance is ${bank}`
-    console.log(ans);   
-    return ans;
-}
+  // debugger;
+  bank = action(amount);
+  // bank = 500
+  const ans = `Your remaining balance is ${bank}`;
+  console.log(ans);
+  return ans;
+};
 
 // atm(calcDeposit, 5);
 // atm(calcDeposit, 10);
 // atm(calcDeposit, 20);
 // atm(calcDeposit, 50);
 
-
-
 // for(let bill of bills){
-    //     atm(calcDeposit, bill)
-    // }
-    // Examples of using higher order functions
-    // Array iterations: array functions that expect other functions.
+//     atm(calcDeposit, bill)
+// }
+// Examples of using higher order functions
+// Array iterations: array functions that expect other functions.
 // RETURN VALUE: undefined
 // const bills = [5,10,20,50];
-// const logBill = (bill) => console.log(bill) 
+// const logBill = (bill) => console.log(bill)
 // const multiplyBy2 = (bill) => {
 //      return bill * 2
 // }
@@ -312,61 +292,6 @@ const atm = (action, amount) => {
 // }
 
 // console.log(bills.find(find5))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // MULTIPLE CHOICE QUESTION:
 // WHICH ONE OF THESE STATEMENTS ARE INCORRECT?
