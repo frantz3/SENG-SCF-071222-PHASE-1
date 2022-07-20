@@ -3,7 +3,19 @@
 // Callbacks and Array Iterations ( Bag of Marbles )
 // =============================================================================
 //
-const marbles = ["blue", "red", "black", "cyan", "green", "yellow", "orange"];
+const bagOfMarbles = ["blue", "red", "black", "cyan", "green", "yellow", "orange"];
+let count = 0
+function countTheMarbles(marble) {
+    return marble
+    count=count++
+}
+
+bagOfMarbles.forEach(countTheMarbles)
+
+function cleanMarble(marble) {
+    const cleanMarble = "Clean" + marble;
+     
+}
 // Foreach fCount
 // map fClean
 // find fGreen
