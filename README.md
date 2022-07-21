@@ -56,6 +56,15 @@ To clone this repository into your local computer from this remote follow the st
 
    ![browser example](/assets/images/browser.png)
 
+## Github Commands
+1. git status
+1. git add . 
+1. git commit -m "present tense, active voice commit"
+1. git remote -v 
+1. git pull `-remote name-` main
+1. git pull --ff `-remote name-` main
+   1. Accept both incoming changes on vscode
+   1. Then add and commit changes
 
 ## HOTKEYS:
 **WINDOWS**

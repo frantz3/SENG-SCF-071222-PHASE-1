@@ -25,3 +25,6 @@ for(let idx in arr){
   let element = arr[idx];
   setTimeout(() => sendToPage(element), (500 * Number(idx)))
 }
+
+
+const pickAtRandom = (items) => items[Math.floor(Math.random()*items.length)] 
