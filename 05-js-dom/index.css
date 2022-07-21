@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poke__list {
+  list-style-type: none;
+}
+
+.poke__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.poke__card {
+  margin: 1px;
+  border: black solid;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+}

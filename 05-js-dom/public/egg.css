@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bounce {
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.slideIn {
+  animation: slideFromLeft 0.5s linear;
+}
+
+p:hover {
+  transform: scale(1.2);
+  font-weight: 800;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+
+  62.5% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100vw);
+  }
+  75% {
+    transform: translateX(5vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
