@@ -10,13 +10,13 @@
 
 .poke__list {
   display: flex;
-  flex-direction: column;
+  
 }
 
 .poke__card {
   margin: 1px;
   border: black solid;
-  width: 300px;
+  width: 200px;
   padding: 30px;
   text-align: center;
 }
