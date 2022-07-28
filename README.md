@@ -70,6 +70,15 @@ To clone this repository into your local computer from this remote follow the st
    1. Accept both incoming changes on vscode
    1. Then add and commit changes
 
+### What to do if git push is giving you a permission error?
+[Follow this video so you don't lose your work](https://youtu.be/ALGkjl1bz_M)
+1. `git remote -v` will list the remote repository you have set.
+   1. If the remote that you have for your origin says learn-co-curriculum you cloned the wrong repo.
+1. `git remote remove origin` will remove the origin with learn-co-curriculum
+1. Navigate to canvas find the specific lab and clone it
+1. Copy the ssh github link for your newly forked repository
+1. `git remote add origin <PasteLinkHere>` This will add the link we pasted to your origin and allow you to push your changes on your repo.
+
 ## HOTKEYS:
 **WINDOWS**
 1. ctrl + c - copy
