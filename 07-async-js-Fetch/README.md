@@ -80,7 +80,7 @@ HTTP Methods
 * Lightweight data storage for data exchange
 * Works with any language
 * Easy to read
-
+[w3 json](https://www.w3schools.com/whatis/whatis_json.asp)
 ### JSON SERVER Installation
 - Install JSON Server by running the following command in the terminal: `npm install -g json-server`
 - To start the JSON server, run `json-server --watch db.json` while in the directory that contains the `db.json` file i.e. `SENG-SCF.../07-async-js-fetch`

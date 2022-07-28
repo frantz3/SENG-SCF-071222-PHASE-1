@@ -68,23 +68,9 @@ document.addEventListener("keydown", (event) => {
     
 })
 
-// Bonus: Make the picture zoom in when mouseenter, then zoom out when mouseleaves
-// =============================================================================
-
 // Bonus: Make the picture change when mouseenter, then zoom out when mouseleaves
 // =============================================================================
 
-// Introduce the Web and Request Response Flow
-// =============================================================================
-
-// Talk about HTTP
-// =============================================================================
-
-// HTTP REQUEST (GET, POST, PATCH, PUT, DELETE)
-// =============================================================================
-
-// CREATE OUR OWN SERVERS (JSON, JSON-SERVER)
-// =============================================================================
 
 // FETCH AND PROMISE
 // =============================================================================
