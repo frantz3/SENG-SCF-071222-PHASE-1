@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="public/egg.css" />
+    <title>Document</title>
+    <script type="text/javascript" defer src="index.js"></script>
+  </head>
+  
+  
+  <body>
+    <h1 class="bounce">SCF X Flatiron School</h1>
+    <form id="poke-form">
+      <div>
+        <h3>Create Your Own Pokemon</h3>
+      </div>
+      <div>
+          <label for="name">Name:</label>
+          <input type="text" id="form-name" name="name" />
+      </div>
+      <div>
+          <label for="imgUrl">Image Url:</label>
+          <input type="text" id="form-imgUrl" name="imgUrl" />
+      </div>
+      <div>
+          <label for="weight">Weight:</label>
+          <input type="text" id="form-weight" name="weight" />
+      </div>
+      <div>
+          <button>Submit</button>
+      </div>
+    </form>
+    
+    <div id="main" class="container">
+      <ul class="poke__list">
+        <li class="poke__card bounce" >
+          <h3 class="poke__header">Pokemon Name</h3>
+          <img
+            class="poke__img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6LT5cUz0Taxk0T1dWbNsZGHd6g3dlaTPoDA&usqp=CAU"
+            alt="example pokeball"
+          />
+          <p class="poke_description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
+            necessitatibus perferendis, porro amet, voluptatem earum, labore
+            soluta iusto dolor cumque repellendus a officiis error sequi
+            deleniti! Magni quisquam accusamus ut!
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="public/egg.js"></script>
+    <script type="text/javascript" src="public/data.js"></script>
+  </body>
+</html>
