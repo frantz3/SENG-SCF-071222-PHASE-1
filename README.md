@@ -105,3 +105,10 @@ To clone this repository into your local computer from this remote follow the st
 1. [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 1. [code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+
+
+## Printing out Worksheet
+1. Make sure you push your changes via git
+1. Navigate to your directory on github
+1. Go to the index.js file on github
+1. press ctrl + p to print out the formatted view of the page. 
