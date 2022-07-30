@@ -1,5 +1,5 @@
 const firstInput = document.querySelector("input")
-
+pokemons.forEach((pokemon) => renderAPokeCard(pokemon))
 
 function renderAPokeCard(pokemonObj){
 
@@ -25,7 +25,7 @@ function renderAPokeCard(pokemonObj){
   // add text for button "remove"
   button.innerText = "remove" // <button>remove</button>
 
-  img.src = pokemonObj.backImg
+  img.src = pokemonObj.frontImg
   img.alt = pokemonObj.name
   img.width = 150
 
@@ -70,64 +70,12 @@ document.addEventListener("keydown", (event) => {
 
 // Bonus: Make the picture change when mouseenter, then zoom out when mouseleaves
 // =============================================================================
-<<<<<<< HEAD
-document.querySelector(".poke__img").parentNode.remove();
-const imgList = document.querySelectorAll(".poke__img");
 
-imgList.forEach((image) => {
-  image.addEventListener('mouseenter', (event) => {
-
-=======
-// WHERE TO ADD OUR FIRST EVENT LISTENER FOR MOUSE ENTER
-document.querySelector(".poke__img").parentElement.remove()
-const imgList = document.querySelectorAll(".poke__img")
-
-// Have a nodeList, now we need to add an event listener to EACH item in that list
-
-imgList.forEach((image) => {
-  image.addEventListener('mouseenter', (event) => {
->>>>>>> c77d36c1a8674bfae5df82c190a8f26fcfee7e78
-    const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
-    event.target.src = foundPokeObj.frontImg
-  })
-
-<<<<<<< HEAD
-  
-=======
-  image.addEventListener('mouseleave', (event) => {
-    const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
-    event.target.src = foundPokeObj.backImg
-  })
->>>>>>> c77d36c1a8674bfae5df82c190a8f26fcfee7e78
-})
 
 // FETCH AND PROMISE
 // =============================================================================
-<<<<<<< HEAD
-fetch('http://localhost:3000/pokemons/')
-.then((resp) => {
-  console.log(resp.json)
-})
-
-=======
-// FETCH MAKES BY DEFAULT A GET REQUEST
-// FETCH IS ALWAYS RETURN A PROMISE
-fetch("http://localhost:3000/pokemons") // GIVES US BACK A PROMISE
-  .then((resp) => resp.json()) // GIVE US BACK A PROMISE
-  .then((data) => {
-    data.forEach((pokemon) => renderAPokeCard(pokemon))
-  })
-  // .then handles that promise and waits for the resp
-  // resp.json() converts our resp into JS 
 
 
-// SYNCHRONOUS - An operataion takes place sequentially. 
-// TECHNICAL TERM!!!
-// ASYNCHRONOUS - When we do something that is going to take a 
-// long time. 
-// we continue with everything else, and let the 
-// other thing run on its own
->>>>>>> c77d36c1a8674bfae5df82c190a8f26fcfee7e78
 
 
 

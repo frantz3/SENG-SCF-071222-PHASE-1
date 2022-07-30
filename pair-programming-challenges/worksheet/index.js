@@ -1,3 +1,42 @@
+// 07/29/22
+// ==============================================================================
+// How Do I add These two events to the dom
+/* 
+HEADS UP: Part of the challenge is to figure out
+          how you are going to validate that your
+          code works. Feel free to ask, but attempt
+          to come up with a way to test if your code
+          works on your own or w/ a partner first. 
+<body>
+  <h1>Hello World</h1>
+  <div id="uniqueValue">
+    <p class="bold">lorem ipsum</p>
+  </div>
+</body>
+
+*/
+
+// Click on the div with id of unique value that 
+// appends another p tag with textContent of "Hello world"
+
+// Adds keydown for the body that changes the color of 
+// the font to blue if you press 'u',
+// black if you press 'b',
+// red if you press 'r'
+
+//
+// ==============================================================================
+
+// ==============================================================================
+// Navigate to this link: https://github.com/public-apis/public-apis
+// Pick an api without any authentication
+// Console log the data with fetch 
+// ==============================================================================
+
+
+
+// 07/22/22
+// ==============================================================================
 // Write down the 7 primitive data types, with an example. I.E. `String:"example"
 // ==============================================================================
 /* 
