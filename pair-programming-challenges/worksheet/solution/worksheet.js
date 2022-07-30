@@ -1,7 +1,7 @@
 document.querySelector('#uniqueValue').addEventListener('click',(event) => {
     let p = document.createElement('p')
     p.textContent = "Hello World"  
-    document.body.append(p)
+    event.target.append(p)
 })
 
 
@@ -19,7 +19,6 @@ document.querySelector("body").addEventListener('keydown', (event)=>{
             document.body.style.color = 'red'
             break
         }
-
         default: {
             const randomColor = Math.floor(Math.random()*16777215).toString(16);
             document.body.style.color = "#" + randomColor;
