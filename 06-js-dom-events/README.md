@@ -64,7 +64,7 @@ HTML Forms have default functionality when a submit event is detected. A form wi
 </form>
 ```
 
-This is a typical form you may write in your application. If you want to add event listener to listen for submit you have to target the form. Make sure you target the form and not the button, since what gets submitted is the form.
+This is a typical form you may write in your mtrapplication. If you want to add event listener to listen for submit you have to target the form. Make sure you target the form and not the button, since what gets submitted is the form.
 
 ```js
 // Finds the form and saves it to a form variable
@@ -86,7 +86,7 @@ form.addEventListener('submit', (event) => {
     event.target.weight // gives us the input field with name='weight'
     event.target.weight.value // gives us the value of that input field
 
-    // NOTE: The when targetting elements `.value` is usually reserved for
+    // NOTE: The when targeting elements `.value` is usually reserved for
     // things like input fields. If you find that you aren't getting a
     // a value back, test to see if you get the intended result using
     // textContent instead

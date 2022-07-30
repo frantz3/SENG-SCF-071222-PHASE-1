@@ -32,6 +32,9 @@ function renderAPokeCard(pokemonObj){
   li.append(h3, img, p);
 }
 
+const form = document.getElementById("poke-form");
+const firstInput = document.querySelector("input");
+
 
 // Dom Manipulation Review (Target the new form)
 // =============================================================================
@@ -68,7 +71,9 @@ function renderAPokeCard(pokemonObj){
 // What are events? (Taking a look at different events with the same callback)
 // =============================================================================
 
+document.querySelector("input").addEventListener('change', () => {})
 
+const callback = (event) => console.log(event.type)
 
 
 
