@@ -28,9 +28,9 @@ document.querySelector("body").addEventListener('keydown', (event)=>{
 
 fetch("http://shibe.online/api/shibes")
     .then((r) => r.json())
-    .then(data => {
-        console.log(data)
+    .then(dogImage => {
+        console.log(dogImage)
         const img = document.createElement('img')
-        img.src = data
+        img.src = dogImage
         document.body.append(img)
     })
