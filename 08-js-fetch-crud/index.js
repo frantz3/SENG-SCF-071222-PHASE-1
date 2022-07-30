@@ -1,5 +1,5 @@
 const firstInput = document.querySelector("input")
-pokemons.forEach((pokemon) => renderAPokeCard(pokemon))
+
 
 function renderAPokeCard(pokemonObj){
 
@@ -25,7 +25,7 @@ function renderAPokeCard(pokemonObj){
   // add text for button "remove"
   button.innerText = "remove" // <button>remove</button>
 
-  img.src = pokemonObj.frontImg
+  img.src = pokemonObj.backImg
   img.alt = pokemonObj.name
   img.width = 150
 
@@ -38,48 +38,30 @@ function renderAPokeCard(pokemonObj){
     event.target.parentElement.remove()
   } )
 }
-const form = document.getElementById("poke-form")
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault() // Prevents refresh
-    const name = e.target.name.value
-    const imgUrl = e.target.imgUrl.value
-    const weight = e.target.weight.value
-    const pokeObj = {
-        name: name, 
-        imgUrl: imgUrl, 
-        weight: weight
-    }
+document.querySelector(".poke__img").parentElement.remove()
+const imgList = document.querySelectorAll(".poke__img")
 
-    renderAPokeCard(pokeObj);
-    e.target.reset(); // Resets input fields!
-}) 
+imgList.forEach((image) => {
+  image.addEventListener('mouseenter', (event) => {
+    const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
+    event.target.src = foundPokeObj.frontImg
+  })
 
-document.addEventListener("keydown", (event) => {
-    console.log(event);
-    // NEED event.key
-    // only want to make dark mode when event.key is period
-    // if event.key is period we make the document darkmode
-    if(event.key === '.'){
-        event.target.style.backgroundColor = "black"
-        event.target.style.color = "white"
-        event.target.style.border = "white solid"
-    } 
-    
+  image.addEventListener('mouseleave', (event) => {
+    const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
+    event.target.src = foundPokeObj.backImg
+  })
 })
 
-// Bonus: Make the picture change when mouseenter, then zoom out when mouseleaves
-// =============================================================================
+// Review the how to fetch by making a get pokemon function
+// Make a get pokemon by id function
+// make a get pokemon by name function
 
 
-// FETCH AND PROMISE
-// =============================================================================
-
-
-
-
-
-
+// Make a create pokemon function
+// Make a update pokemon function
+// make a delete pokemon function
 
 
 
