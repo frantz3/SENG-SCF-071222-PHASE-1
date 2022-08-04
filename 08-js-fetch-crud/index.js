@@ -64,6 +64,46 @@ imgList.forEach((image) => {
 // make a delete pokemon function
 
 
+// Variables + Types
+// Array
+// Functions
+// Objects
+// DOM Manipulation
+// Event Listeners
+// Fetch - ASYNC
+
+//GET DATA FROM A SERVER
+// FETCH IS ASYNCHRONOUS
+
+fetch('A URL', ) // RETURNS A PROMISE OBJECT
+  .then(resp => { // RESPONSE DATA, BELOW WE NEED TO CONVERT THE JSON INTO POJO
+    return resp.json() // RETURNS ANOTHER PROMISE
+  }) // HANDLES THE RETURN OF OUR PROMISE
+  .then((data) => {
+    data.forEach((Obj) => {
+      RenderData(Obj)
+    })
+  })
+
+  //POST REQUEST
+
+  const url ="url"
+  const configObj = {
+    method: 'POST',
+    body: {
+      name: '',
+      frontImg: '',
+      backImg: '',
+      weight: 30,
+
+    }
+  }
+
+  const postAPokemon = () => {
+    fetch('URL')
+    .then(resp => resp.json)
+    .then()
+  }
 
 
 
@@ -81,3 +121,13 @@ imgList.forEach((image) => {
 
 
 
+card.querySelector('#set_free').addEventListener(click, () => {
+  card.innerHTML = ''
+  //or
+  card.remove()
+  deleteAnimal(animal.id)
+})
+
+deleteAnimal(id) {
+  fetch('URL')
+}

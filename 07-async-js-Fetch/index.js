@@ -70,14 +70,12 @@ document.addEventListener("keydown", (event) => {
 
 // Bonus: Make the picture change when mouseenter, then zoom out when mouseleaves
 // =============================================================================
-<<<<<<< HEAD
 document.querySelector(".poke__img").parentNode.remove();
 const imgList = document.querySelectorAll(".poke__img");
 
 imgList.forEach((image) => {
   image.addEventListener('mouseenter', (event) => {
 
-=======
 // WHERE TO ADD OUR FIRST EVENT LISTENER FOR MOUSE ENTER
 document.querySelector(".poke__img").parentElement.remove()
 const imgList = document.querySelectorAll(".poke__img")
@@ -86,19 +84,15 @@ const imgList = document.querySelectorAll(".poke__img")
 
 imgList.forEach((image) => {
   image.addEventListener('mouseenter', (event) => {
->>>>>>> c77d36c1a8674bfae5df82c190a8f26fcfee7e78
     const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
     event.target.src = foundPokeObj.frontImg
   })
 
-<<<<<<< HEAD
   
-=======
   image.addEventListener('mouseleave', (event) => {
     const foundPokeObj = pokemons.find((poke) => event.target.alt === poke.name)
     event.target.src = foundPokeObj.backImg
   })
->>>>>>> c77d36c1a8674bfae5df82c190a8f26fcfee7e78
 })
 
 // FETCH AND PROMISE
