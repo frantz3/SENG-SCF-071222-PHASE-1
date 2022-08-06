@@ -1,154 +1,111 @@
-const firstInput = document.querySelector("input");
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const renderAPokeCard = (pokemonObj) => {
-  // Creating and Selecting necessary Elements
-  const li = document.createElement("li");
-  const h3 = document.createElement("h3");
-  const img = document.createElement("img");
-  const p = document.createElement("p");
-  const button = document.createElement("button"); // <button></button>
-  const ul = document.querySelector(".poke__list");
+arr.find((n) => {
+  return n === 3;
+});
 
-  // Styling Elements
-  li.classList.add("poke__card");
-  h3.classList.add("poke__header");
-  img.classList.add("poke__img", "bounce");
-  p.classList.add("poke__description");
-  ul.style.flexDirection = "row";
-  ul.style.flexWrap = "wrap";
-
-  // Modifying Elements
-  h3.innerText = pokemonObj.name;
-
-  // add text for button "remove"
-  button.innerText = "remove"; // <button>remove</button>
-
-  img.src = pokemonObj.backImg;
-  img.alt = pokemonObj.name;
-  img.width = 150;
-
-  p.innerText = pokemonObj.weight;
-
-  // Appending Elements
-  ul.append(li);
-  li.append(h3, img, p, button);
-  button.addEventListener("click", (event) => {
-    event.target.parentElement.remove();
-  });
-};
-
-function addListenersForImages() {
-  const imgList = document.querySelectorAll(".poke__img");
-  console.log(imgList);
-  imgList.forEach((image) => {
-    image.addEventListener("mouseenter", (event) => {
-      const foundPokeObj = pokemons.find(
-        (poke) => event.target.alt === poke.name
-      );
-      event.target.src = foundPokeObj.frontImg;
-    });
-
-    image.addEventListener("mouseleave", (event) => {
-      const foundPokeObj = pokemons.find(
-        (poke) => event.target.alt === poke.name
-      );
-      event.target.src = foundPokeObj.backImg;
-    });
-  });
+function average(arr) {
+  /* 
+    .reduce takes in two arguments
+    a callback and an initial value
+    then it iterates through ever
+    element in the array and adds
+    that number to the sum
+    then returns the sum
+  */
+  return arr.reduce((sum, num) => sum + num, 0) / arr.length;
 }
 
-document.querySelector(".poke__img").parentElement.remove();
+function contains_avg(arr) {
+  const avg = average(arr);
+  return arr.includes(avg);
+}
 
-// Review the how to fetch by making a get pokemon function
-// Make a get pokemon by id function
-// make a get pokemon by name function
+const a = [2, 3, 4, 5, 6];
+const b = [2, 3, 4, 5, 100];
 
-// Make a create pokemon function
-// Make a update pokemon function
-// make a delete pokemon function
+contains_avg(a);
+// => returns true
+contains_avg(b);
+// => returns false
 
-// FETCH
-// GET - POST - PATCH - DELETE
-// C R U D
+function linear_search(arr, target_num) {
+  const foundNum = arr.find((num, idx) => {
+    if (num === target_num) {
+      return true;
+    } else {
+      console.log(`Remaining elements to search: ${arr.length - idx}`);
+    }
+  });
 
-// VARIABLES + TYPES
-// ARRAY
-// OBJECTS
-// FUNCTIONS
-// DOM MANIPULATION
-// EVENT LISTENERS
-// FETCH - ASYNC
+  return foundNum ? true : false;
+}
 
-// CALLBACK IS JUST A FUNCTION THAT IS USED AS AN ARGUMENT
+function binary_search(arr, target) {
+  console.log(`Remaining elements to search: ${arr.length}`);
+  // The case that we're looking at one item
+  if (arr.length <= 1) {
+    return arr[0] === target ? target : false;
+  }
 
-// GET DATA FROM A SERVER
-// FETCH IS ASYNC REQUEST
-// GET REQUEST!
+  // Find the middle item in the array
+  const midpoint = Math.floor(arr.length / 2); // Make sure to floor the value
+  const middleElem = arr[midpoint];
 
-const getAllPokemons = () => {
-  fetch("http://localhost:3000/pokemons") // RETURNS PROMISE OBJECT
-    .then((resp) => {
-      // COMPLETED PROMISE!!!!
-      console.log(resp); // RESP DATA NOT USABLE YET
-      // BELOW WE NEED TO CONVERT THE JSON INTO POJO
-      // WE HAVE NO IDEA HOW LONG ITS GOING TO TAKE
-      // SO WE USE A PROMISE SO THAT WE CAN MAKE IT ASYNC
-      return resp.json(); // RETURNS PROMISE AND THEN WE GET OUR POJO
-    }) // .then handles the return of our promise!
-    .then((pokeArr) => {
-      // pokeArr.forEach(renderAPokeCard);
-      pokeArr.forEach((pokeObj) => renderAPokeCard(pokeObj));
-      addListenersForImages();
-    })
-    .catch((error) => console.error(error));
-};
+  /*
+    If the middle item is the target, we can return it.
+    Otherwise, if the target is less than the midpoint 
+    Throw out all of the items to the right of it and run this method again
+    otherwise, throw out all the items to the left of it and run this method again
+  */
+  if (middleElem === target) {
+    return target;
+  } else if (middleElem >= target) {
+    return binary_search(arr.slice(0, midpoint), target);
+  } else {
+    return binary_search(arr.slice(midpoint, arr.length), target);
+  }
+}
 
-const getOnePokemon = (id) => {
-  fetch(`http://localhost:3000/pokemons/${id}`)
-    .then((resp) => resp.json())
-    .then((pokemon) => renderAPokeCard(pokemon))
-    .catch((error) => console.error(error));
-};
+// Example 1:
+hasTargetSum([-1, 3, 8, 12, 4, 11, 7], 10);
+// should return
+// [[-1,11], [3,7]]
 
-// {
-//   "id": 48,
-//   "name": "venonat",
-//   "frontImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
-//   "backImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/48.png",
-//   "weight": 300
-// },
+// it is fine if you return repeats
+// for example: [[-1,11], [3,7], [11, -1], [7,3]]
 
-// POST REQUEST
-// WE WANT TO MAKE A POST REQUEST TO A RESOURCE
-// CONFIG OUR FETCH
-// WE ARE GOING THE POST TO THE END POINT THAT WE WANT
-// if we want a post for
-//        pokemon  / we use ENDPOINT: /pokemons
-//        digimons / we use ENDPOINT: /digimons
-const url = "http://localhost:3000/pokemons";
-const configObj = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    name: "CustomPoke",
-    frontImg: "https://www.serebii.net/sunmoon/custom1.jpg",
-    backImg: "https://www.serebii.net/sunmoon/custom2.jpg",
-    weight: 30,
-  }),
-};
+// Example 2:
+hasTargetSum([22, 19, 4, 6, 30, -6], 25);
+// returns
+// [[19, 6]] or [[19, 6], [6, 19]]
 
-const postAPokemon = () => {
-  fetch(url, configObj)
-    .then((resp) => resp.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-};
+function hasTargetSum(arr, target) {
+  const results = [];
+  arr.forEach((currentNum) => {
+    arr.forEach((nextNum) => {
+      if (currentNum + nextNum === target) {
+        results.push([currentNum, nextNum]);
+      }
+    });
+  });
 
-// PATCH REQUEST
+  return results;
+}
 
-// CALL FUNCTIONS HERE
+function hasTargetSumLinear(arr, target) {
+  let results = [];
+  let history = {};
 
-// getAllPokemons();
-getOnePokemon(4);
+  arr.forEach((current) => {
+    const remainder = target - current;
+    if (remainder in history) {
+      results.push([current, remainder]);
+    }
+    history[remainder] = true;
+  });
+
+  return results;
+}
+
+// https://docs.google.com/presentation/d/11EJj_5n8bT_yx-Nip736MsdXIZgsfP2k-R7FkoOs9Y0/edit#slide=id.p
