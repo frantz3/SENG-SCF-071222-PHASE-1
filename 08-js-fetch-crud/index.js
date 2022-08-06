@@ -128,6 +128,6 @@ card.querySelector('#set_free').addEventListener(click, () => {
   deleteAnimal(animal.id)
 })
 
-deleteAnimal(id) {
-  fetch('URL')
+function deleteAnimal(id) {
+  
 }
