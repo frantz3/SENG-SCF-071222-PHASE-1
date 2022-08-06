@@ -47,14 +47,6 @@ HEADS UP: Part of the challenge is to figure out
 
 
 
-
-
-
-
-
-
-
-
 // Write out your definition for what a function and a callback is. Give examples 
 // of a named function, arrow function, and an anonymous arrow function
 // ==============================================================================

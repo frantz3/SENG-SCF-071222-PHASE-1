@@ -9,8 +9,7 @@
     <title>Document</title>
     <script type="text/javascript" defer src="index.js"></script>
   </head>
-  
-  
+
   <body>
     <h1 class="bounce">SCF X Flatiron School</h1>
     <form id="poke-form">
@@ -18,25 +17,29 @@
         <h3>Create Your Own Pokemon</h3>
       </div>
       <div>
-          <label for="name">Name:</label>
-          <input type="text" id="form-name" name="name" />
+        <label for="name">Name:</label>
+        <input type="text" id="form-name" name="name" />
       </div>
       <div>
-          <label for="imgUrl">Image Url:</label>
-          <input type="text" id="form-imgUrl" name="imgUrl" />
+        <label for="frontImg">Front Img Url:</label>
+        <input type="text" id="form-frontImg" name="frontImg" />
       </div>
       <div>
-          <label for="weight">Weight:</label>
-          <input type="text" id="form-weight" name="weight" />
+        <label for="backImg">Back Img Url:</label>
+        <input type="text" id="form-backImg" name="backImg" />
       </div>
       <div>
-          <button>Submit</button>
+        <label for="weight">Weight:</label>
+        <input type="text" id="form-weight" name="weight" />
+      </div>
+      <div>
+        <button>Submit</button>
       </div>
     </form>
-    
+
     <div id="main" class="container">
       <ul class="poke__list">
-        <li class="poke__card bounce" >
+        <li class="poke__card bounce">
           <h3 class="poke__header">Pokemon Name</h3>
           <img
             class="poke__img"
