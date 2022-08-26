@@ -115,7 +115,7 @@ fetch("http://localhost:3000/pokemons") // GIVES US BACK A PROMISE
   // resp.json() converts our resp into JS 
 
 
-// SYNCHRONOUS - An operataion takes place sequentially. 
+// SYNCHRONOUS - An operation takes place sequentially. 
 // TECHNICAL TERM!!!
 // ASYNCHRONOUS - When we do something that is going to take a 
 // long time. 

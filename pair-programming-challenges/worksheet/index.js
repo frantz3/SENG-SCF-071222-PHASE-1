@@ -54,6 +54,7 @@ HEADS UP: Part of the challenge is to figure out
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -67,6 +68,9 @@ HEADS UP: Part of the challenge is to figure out
 // A callback is a function that is passed as an argument.
 
 
+=======
+// Write out your definition for what a function and a callback is. Give examples 
+>>>>>>> b8cf114495ad713b746c0f501de2a64c6716ae69
 // of a named function, arrow function, and an anonymous arrow function
 
 
